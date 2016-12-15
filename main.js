@@ -69,11 +69,6 @@ $(document).ready(function() {
 // If / Switch chain to match Weather API Reponse to corresponding Skycon icons
   function matchWeatherIcon (WeatherID, WeatherIconID, WeatherIDPrefix, dayWeatherIcon) {
     var icons = new Skycons({"color": "black"});
-      icons.set("day0WeatherIcon", Skycons.CLEAR_DAY);
-      icons.set("day1WeatherIcon", Skycons.CLEAR_DAY);
-      icons.set("day2WeatherIcon", Skycons.CLEAR_DAY);
-      icons.set("day3WeatherIcon", Skycons.CLEAR_DAY);
-      icons.set("day4WeatherIcon", Skycons.CLEAR_DAY);
     icons.play();
 
     if (WeatherID === 611 || WeatherID === 612 ) {
