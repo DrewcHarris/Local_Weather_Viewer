@@ -9,7 +9,7 @@ This is one of the projects required for the Front End Certificate at [Free Code
 
 ## Completed Project
 
-![Alt text](//placeholderForImageLink)
+![Alt text](https://github.com/DrewcHarris/Local_Weather_Viewer/blob/master/screenshot.png?raw=true)
 
 You can view the fully working project on my [CodePen](http://codepen.io/drewharris/full/BQqxYj/).
 
