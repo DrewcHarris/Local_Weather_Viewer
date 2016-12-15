@@ -1,0 +1,11 @@
+#currentTempText {
+  font-weight: bolder;
+}
+
+#smallHR{
+  width: 250px;
+}
+#settingsPane {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

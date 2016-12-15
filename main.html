@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Local Weather Viewer</title>
+    <!-- Bootstrp CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap Toggle -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- skycons link -->
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="currentWeatherPane" class="container text-center col-sm-8 col-sm-offset-2">
+      <div class="row col-md-12">
+        <h1 class="page-header" id="city">Getting your Location...</h1>
+      </div>
+      <div class="row col-md-12">
+        <div id="icons">
+          <canvas id="currentWeatherIcon" width="64" height="64">
+          </canvas>
+        </div>
+        <h3 id="currentWeatherText">Getting Current Weather...</h3>
+          <div>
+            <span id="currentHighTempText"></span>
+          </div>
+          <div>
+            <span id="currentTempText"></span>
+          </div>
+          <div>
+            <span id="currentLowTempText"></span>
+          </div>
+        </div>
+      <div id="settingsPane" class="row col-md-12">
+        <div>
+          <input id="units" type="checkbox" checked data-toggle="toggle" data-on="°F" data-offstyle="info" data-off="°C" data-size="small" >
+        </div>
+      </div>
+      <div id="footer"class="row col-md-12">
+        <hr id="smallHR">
+        <p class="love">Made with <i class="fa fa-heart"></i> by <a href="https://www.freecodecamp.com/drewcharris" target="_blank"> Drew Harris</p>
+      </div>
+    </div>
+
+
+
+<!-- jquery CDN link -->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<!-- Bootstrap Toggle JS -->
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<!-- JS file link -->
+    <script src = "main.js"></script>
+  </body>
+</html>
