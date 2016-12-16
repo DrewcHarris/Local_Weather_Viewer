@@ -179,12 +179,11 @@ function getInputWeather(zipInput) {
     ,
       success: function(zippopotam_response){
         var city = zippopotam_response.places[0]["place name"];
-        console.log("City is " + city);
         var state = zippopotam_response.places[0].state;
-        console.log("State is " + state);
         $('#city').text(city + ", " + state + "'s Current Weather");
         $('#invalid').text("");
         $('#units').bootstrapToggle('on');
+        $('#postal-code').val("");
         $('#locationFields').collapse('hide');
         getLocalWeather(weatherURL);
 
