@@ -11,7 +11,7 @@ This is one of the projects required for the Front End Certificate at [Free Code
 
 ![Alt text](https://github.com/DrewcHarris/Local_Weather_Viewer/blob/master/screenshot.png?raw=true)
 
-You can view the fully working project [here](https://drewcharris.github.io/Local_Weather_Viewer/index.html).
+You can view the fully working project [here](http://codepen.io/drewharris/full/BQqxYj/).
 
 ## How it Works
 
