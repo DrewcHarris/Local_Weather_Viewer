@@ -185,6 +185,7 @@ function getInputWeather(zipInput) {
         $('#units').bootstrapToggle('on');
         $('#postal-code').val("");
         $('#locationFields').collapse('hide');
+        window.scrollTo(0,0);
         getLocalWeather(weatherURL);
 
       },
