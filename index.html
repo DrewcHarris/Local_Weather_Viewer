@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div id="currentWeatherPane" class="container text-center col-sm-8 col-sm-offset-2">
-      <div class="row col-md-12">
+    <div class="container text-center col-sm-8 col-sm-offset-2">
+      <div id="currentWeatherPane">
         <h1 class="page-header" id="city">Getting your Location...</h1>
-      </div>
-      <div class="row col-md-12">
+      <div class="row col-sm-8 col-sm-offset-2">
         <div id="icons">
           <canvas id="currentWeatherIcon" width="64" height="64">
           </canvas>
@@ -35,26 +34,43 @@
             <span id="currentLowTempText"></span>
           </div>
         </div>
-      <div id="settingsPane" class="row col-md-12">
+      <div id="settingsPane" class="col-sm-8 col-sm-offset-2">
         <div>
           <input id="units" type="checkbox" checked data-toggle="toggle" data-on="°F" data-offstyle="info" data-off="°C" data-size="small" >
         </div>
       </div>
-      <div id="footer"class="row col-md-12">
+      <div id="zipCodeRow" class="col-sm-8 col-sm-offset-2">
+        <div>
+          <a id="showOrHide" href="#locationFields" data-toggle="collapse">Change Location</a>
+        </div>
+        <div id="locationFields" class="collapse">
+          <div>
+            <input class="text-center" id="postal-code" name="postal-code" type="number" placeholder="zip or postal code">
+          </div>
+          <div>
+            <p id="invalid"></p>
+          </div>
+          <div>
+            <button id="submit" class="btn btn-primary btn-sm text-center">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div id="footer"class="col-sm-8 col-sm-offset-2">
         <hr id="smallHR">
         <p class="love">Made with <i class="fa fa-heart"></i> by <a href="https://www.freecodecamp.com/drewcharris" target="_blank"> Drew Harris</p>
       </div>
     </div>
 
 
-
 <!-- jquery CDN link -->
-    <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 <!-- Bootstrap Toggle JS -->
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- JS file link -->
     <script src = "main.js"></script>
   </body>

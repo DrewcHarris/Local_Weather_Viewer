@@ -9,3 +9,29 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+#submit{
+  margin: 10px;
+}
+
+#postal-code {
+    margin: 10px;
+
+}
+
+input[type=number] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#invalid {
+  color: red;
+}

@@ -1,5 +1,7 @@
 # Local Weather Viewer
 
+## UPDATE: Users can now enter a specific zip code and receive the specified current local weather!
+
 ## Introduction
 
 This is one of the projects required for the Front End Certificate at [Free Code Camp](http://freecodecamp.com). I wanted to use a minimalist design to achieve the objective which can be found [here](https://www.freecodecamp.com/challenges/show-the-local-weather), but the user stories include:

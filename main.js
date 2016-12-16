@@ -11,14 +11,11 @@ $(document).ready(function() {
     ,
       success: function(ipapi_response){
         var city = ipapi_response.city;
+        var zip = ipapi_response.postal;
         var state = ipapi_response.region;
         var lon = ipapi_response.longitude;
         var lat = ipapi_response.latitude;
-        var ip = ipapi_response.ip;
         $('#city').text(city + ", " + state + "'s Current Weather");
-        $('#lon').append(lon);
-        $('#lat').append(lat);
-        $('#ip').append(ip);
         getWeatherURL(city, lon, lat);
       },
       error: function(request,status,errorThrown) {
@@ -142,6 +139,63 @@ $(document).ready(function() {
     $('#currentLowTempText').text("Low: " + currentLowTemp + " °C");
     }
 
+  }
+
+// Event Handler to show or hide the change location fields
+  $('#locationFields').on('hide.bs.collapse', function(){
+      $('#showOrHide').text("Change Location");
+    });
+    $('#locationFields').on('show.bs.collapse', function(){
+      $('#showOrHide').text("Hide");
+    });
+
+// Event Handler to get user inputted zip code and trigger function to get inputted weather
+$('#submit').on('click', function(event) {
+  var zipInput = document.getElementById('postal-code').value
+  getInputWeather(zipInput);
+});
+
+// Event Handler to use enter key to submit
+$("#postal-code").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#submit").click();
+    }
+});
+
+
+// Function to get the user's inputted weather
+function getInputWeather(zipInput) {
+  var appID = "8b5e7df6b6cb9a63f665853c2bff00ee";
+  var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=' + zipInput + ',us' + '&units=imperial' + '&appid=' + appID;
+  console.log(weatherURL);
+  getZipLocation(zipInput, weatherURL);
+
+}
+
+//API request to get user's city and state from the inputted zip code
+  function getZipLocation(zipInput, weatherURL) {
+    $.ajax({
+      url: 'http://api.zippopotam.us/us/' + zipInput
+    ,
+      success: function(zippopotam_response){
+        var city = zippopotam_response.places[0]["place name"];
+        console.log("City is " + city);
+        var state = zippopotam_response.places[0].state;
+        console.log("State is " + state);
+        $('#city').text(city + ", " + state + "'s Current Weather");
+        $('#invalid').text("");
+        $('#units').bootstrapToggle('on');
+        $('#locationFields').collapse('hide');
+        getLocalWeather(weatherURL);
+
+      },
+      error: function(request,status,errorThrown) {
+        $('#invalid').text("Please enter a valid zip code");
+        console.log(request);
+        console.log(status);
+        console.log(errorThrown);
+      }
+    });
   }
 
   getLocation();
