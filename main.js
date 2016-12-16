@@ -7,14 +7,14 @@ $(document).ready(function() {
 //API request to get user's location, longitude, and latitude
   function getLocation() {
     $.ajax({
-      url: 'http://ip-api.com/json'
+      url: 'https://ipapi.co/json/'
     ,
       success: function(ipapi_response){
         var city = ipapi_response.city;
-        var state = ipapi_response.regionName;
-        var lon = ipapi_response.lon;
-        var lat = ipapi_response.lat;
-        var ip = ipapi_response.query;
+        var state = ipapi_response.region;
+        var lon = ipapi_response.longitude;
+        var lat = ipapi_response.latitude;
+        var ip = ipapi_response.ip;
         $('#city').text(city + ", " + state + "'s Current Weather");
         $('#lon').append(lon);
         $('#lat').append(lat);

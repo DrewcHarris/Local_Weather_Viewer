@@ -15,7 +15,7 @@ You can view the fully working project [here](https://drewcharris.github.io/Loca
 
 ## How it Works
 
-I used the api from [ip-api.com](http://ip-api.com/) to obtain the user's location, longitude, and latitude.  I then feed these coordinates into [Open Weather Map's current weather api](https://openweathermap.org/current).  From there, I parse the weather response and get the current weather conditions that are then matched to a corresponding [skycon icon](https://darkskyapp.github.io/skycons/) and displayed.  If the user likes, they can then flip the toggle at the bottom to switch between Celsius and Fahrenheit.
+I used the api from [ipapi.co](https://ipapi.co/) to obtain the user's location, longitude, and latitude.  I then feed these coordinates into [Open Weather Map's current weather api](https://openweathermap.org/current).  From there, I parse the weather response and get the current weather conditions that are then matched to a corresponding [skycon icon](https://darkskyapp.github.io/skycons/) and displayed.  If the user likes, they can then flip the toggle at the bottom to switch between Celsius and Fahrenheit.
 
 ## Future Plans
 
