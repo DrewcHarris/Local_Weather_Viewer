@@ -7,18 +7,14 @@ $(document).ready(function() {
 //API request to get user's location, longitude, and latitude
   function getLocation() {
     $.ajax({
-      url: 'http://ip-api.com/json'
+      url: 'https://ip-api.com/json'
     ,
       success: function(ipapi_response){
         var city = ipapi_response.city;
         var state = ipapi_response.regionName;
         var lon = ipapi_response.lon;
         var lat = ipapi_response.lat;
-        var ip = ipapi_response.query;
         $('#city').text(city + ", " + state + "'s Current Weather");
-        $('#lon').append(lon);
-        $('#lat').append(lat);
-        $('#ip').append(ip);
         getWeatherURL(city, lon, lat);
       },
       error: function(request,status,errorThrown) {
@@ -33,7 +29,7 @@ $(document).ready(function() {
 // Constructs the user's API url to be passed into the openweathermap api
   function getWeatherURL (city, lon, lat) {
     var appID = "8b5e7df6b6cb9a63f665853c2bff00ee";
-    var weatherURL = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial' + '&appid=' + appID;
+    var weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=imperial' + '&appid=' + appID;
     getLocalWeather(weatherURL);
   }
 
