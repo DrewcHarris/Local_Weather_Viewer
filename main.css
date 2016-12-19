@@ -1,5 +1,6 @@
 #currentTempText {
   font-weight: bolder;
+  font-size: 18px;
 }
 
 #smallHR{
@@ -17,6 +18,10 @@
 #postal-code {
     margin: 10px;
 
+}
+
+#p1, #p2, #p3, #p4, #p5{
+    margin-bottom: 50px;
 }
 
 input[type=number] {
