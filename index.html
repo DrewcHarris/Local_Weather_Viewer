@@ -16,8 +16,9 @@
   </head>
   <body>
     <div class="container text-center col-sm-8 col-sm-offset-2">
-      <div id="currentWeatherPane">
+      <div id="currentWeatherPane" class="row">
         <h1 class="page-header" id="city">Getting your Location...</h1>
+      </div>
       <div class="row">
         <div>
           <h3 id="currentDateText"></h3>
@@ -28,109 +29,101 @@
         </div>
         <h3 id="currentWeatherText">Getting Current Weather...</h3>
           <div>
-            <span id="currentHighTempText"></span>
-          </div>
-          <div>
             <span id="currentTempText"></span>
-          </div>
-          <div>
-            <span id="currentLowTempText"></span>
-            <br>
-            <br>
           </div>
         </div>
         <div class="row">
           <div class="col-md-2 col-md-offset-1" id="p1">
-              <div>
-                <h4 id="day0DateText"></h4>
-              </div>
-              <div>
-                <canvas id="day0WeatherIcon" width="64" height="64">
-                </canvas>
-              </div>
-              <div>
-                <h4 id="day0WeatherText"></h4>
-              </div>
-              <div>
-                <span id="day0HighTempText"></span>
-              </div>
-              <div>
-                <span id="day0LowTempText"></span>
-              </div>
+            <div>
+              <h4 id="day0DateText"></h4>
             </div>
-            <div class= "col-md-2" id="p2">
-              <div>
-                <h4 id="day1DateText"></h4>
-              </div>
-              <div>
-                <canvas id="day1WeatherIcon" width="64" height="64">
-                </canvas>
-              </div>
-              <div>
-                <h4 id="day1WeatherText"></h4>
-              </div>
-              <div>
-                <span id="day1HighTempText"></span>
-              </div>
-              <div>
-                <span id="day1LowTempText"></span>
-              </div>
+            <div>
+              <canvas id="day0WeatherIcon" width="64" height="64">
+              </canvas>
             </div>
-            <div class= "col-md-2" id="p3">
-              <div>
-                <h4 id="day2DateText"></h4>
-              </div>
-              <div>
-                <canvas id="day2WeatherIcon" width="64" height="64">
-                </canvas>
-              </div>
-              <div>
-                <h4 id="day2WeatherText"></h4>
-              </div>
-              <div>
-                <span id="day2HighTempText"></span>
-              </div>
-              <div>
-                <span id="day2LowTempText"></span>
-              </div>
+            <div>
+              <h4 id="day0WeatherText"></h4>
             </div>
-            <div class= "col-md-2" id="p4">
-              <div>
-                <h4 id="day3DateText"></h4>
-              </div>
-              <div>
-                <canvas id="day3WeatherIcon" width="64" height="64">
-                </canvas>
-              </div>
-              <div>
-                <h4 id="day3WeatherText"></h4>
-              </div>
-              <div>
-                <span id="day3HighTempText"></span>
-              </div>
-              <div>
-                <span id="day3LowTempText"></span>
-              </div>
+            <div>
+              <span id="day0HighTempText"></span>
             </div>
-            <div class="col-md-2" id="p5">
-              <div>
-                <h4 id="day4DateText"></h4>
-              </div>
-              <div>
-                <canvas id="day4WeatherIcon" width="64" height="64">
-                </canvas>
-              </div>
-              <div>
-                <h4 id="day4WeatherText"></h4>
-              </div>
-              <div>
-                <span id="day4HighTempText"></span>
-              </div>
-              <div>
-                <span id="day4LowTempText"></span>
-              </div>
+            <div>
+              <span id="day0LowTempText"></span>
             </div>
           </div>
+          <div class= "col-md-2" id="p2">
+            <div>
+              <h4 id="day1DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day1WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day1WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day1HighTempText"></span>
+            </div>
+            <div>
+              <span id="day1LowTempText"></span>
+            </div>
+          </div>
+          <div class= "col-md-2" id="p3">
+            <div>
+              <h4 id="day2DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day2WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day2WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day2HighTempText"></span>
+            </div>
+            <div>
+              <span id="day2LowTempText"></span>
+            </div>
+          </div>
+          <div class= "col-md-2" id="p4">
+            <div>
+              <h4 id="day3DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day3WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day3WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day3HighTempText"></span>
+            </div>
+            <div>
+              <span id="day3LowTempText"></span>
+            </div>
+          </div>
+          <div class="col-md-2" id="p5">
+            <div>
+              <h4 id="day4DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day4WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day4WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day4HighTempText"></span>
+            </div>
+            <div>
+              <span id="day4LowTempText"></span>
+            </div>
+          </div>
+        </div>
       <div id="settingsPane" class="row">
           <input id="units" type="checkbox" checked data-toggle="toggle" data-on="°F" data-offstyle="info" data-off="°C" data-size="small" ></input>
       </div>

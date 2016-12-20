@@ -63,10 +63,6 @@ $(document).ready(function() {
         matchWeatherIcon(currentWeatherID, currentWeatherIconID, currentWeatherIDPrefix, dayWeatherIcon);
         currentTemp = Math.round(weather_response.main.temp);
         $('#currentTempText').text(currentTemp + " °F");
-        //currentHighTemp = Math.round(weather_response.main.temp_max);
-        //$('#currentHighTempText').text("High: " + currentHighTemp + " °F");
-        //currentLowTemp = Math.round(weather_response.main.temp_min);
-        //$('#currentLowTempText').text("Low: " + currentLowTemp + " °F");
       },
       error: function(request,status,errorThrown) {
         $('#currentWeatherText').text("Unable to determine your local weather.  Please try again.");
@@ -243,8 +239,8 @@ $(document).ready(function() {
 
 // Event handler to change temp if toggle is selected
   $('#units').on('change', function(event) {
-    event.preventDefault();
-    changeCurrentTemp(currentTemp, currentHighTemp, currentLowTemp);
+    console.log("I flipped the units!");
+    changeCurrentTemp(currentTemp);
     changeDay0Temp(day0HighTemp, day0LowTemp);
     changeDay1Temp(day1HighTemp, day1LowTemp);
     changeDay2Temp(day2HighTemp, day2LowTemp);
@@ -253,26 +249,19 @@ $(document).ready(function() {
   });
 
 // Function to switch between °F and °C
-  function changeCurrentTemp (currentTemp, currentHighTemp, currentLowTemp) {
-    if ($('#units').prop("checked")){
+  function changeCurrentTemp (currentTemp) {
+    if ($('#units').prop('checked')){
       $('#currentTempText').text(currentTemp + " °F");
-      //$('#currentHighTempText').text("High: " + currentHighTemp + " °F");
-      //$('#currentLowTempText').text("Low: " + currentLowTemp + " °F");
-
     }
     else {
     currentTemp = Math.round(((currentTemp - 32) * (5/9)));
     $('#currentTempText').text(currentTemp + " °C");
-    //currentHighTemp = Math.round(((currentHighTemp - 32) * (5/9)));
-    //$('#currentHighTempText').text("High: " + currentHighTemp + " °C");
-    //currentLowTemp = Math.round(((currentLowTemp - 32) * (5/9)));
-    //$('#currentLowTempText').text("Low: " + currentLowTemp + " °C");
     }
   }
 
 // Function to switch between °F and °C
   function changeDay0Temp (day0HighTemp, day0LowTemp) {
-    if ($('#units').prop("checked")){
+    if ($('#units').prop('checked')){
       $('#day0HighTempText').text("High: " + day0HighTemp + " °F");
       $('#day0LowTempText').text("Low: " + day0LowTemp + " °F");
 
@@ -287,7 +276,7 @@ $(document).ready(function() {
 
 // Function to switch between °F and °C
   function changeDay1Temp (day1HighTemp, day1LowTemp) {
-    if ($('#units').prop("checked")){
+    if ($('#units').prop('checked')){
       $('#day1HighTempText').text("High: " + day1HighTemp + " °F");
       $('#day1LowTempText').text("Low: " + day1LowTemp + " °F");
 
@@ -302,7 +291,7 @@ $(document).ready(function() {
 
 // Function to switch between °F and °C
   function changeDay2Temp (day2HighTemp, day2LowTemp) {
-    if ($('#units').prop("checked")){
+    if ($('#units').prop('checked')){
       $('#day2HighTempText').text("High: " + day2HighTemp + " °F");
       $('#day2LowTempText').text("Low: " + day2LowTemp + " °F");
 
@@ -317,7 +306,7 @@ $(document).ready(function() {
 
 // Function to switch between °F and °C
   function changeDay3Temp (day3HighTemp, day3LowTemp) {
-    if ($('#units').prop("checked")){
+    if ($('#units').prop('checked')){
       $('#day3HighTempText').text("High: " + day3HighTemp + " °F");
       $('#day3LowTempText').text("Low: " + day3LowTemp + " °F");
 
@@ -325,14 +314,14 @@ $(document).ready(function() {
     else {
       day3HighTemp = Math.round(((day3HighTemp - 32) * (5/9)));
       $('#day3HighTempText').text("High: " + day3HighTemp + " °C");
-      day2LowTemp = Math.round(((day2LowTemp - 32) * (5/9)));
+      day3LowTemp = Math.round(((day3LowTemp - 32) * (5/9)));
       $('#day3LowTempText').text("Low: " + day3LowTemp + " °C");
     }
   }
 
 // Function to switch between °F and °C
   function changeDay4Temp (day4HighTemp, day4LowTemp) {
-    if ($('#units').prop("checked")){
+    if ($('#units').prop('checked')){
       $('#day4HighTempText').text("High: " + day4HighTemp + " °F");
       $('#day4LowTempText').text("Low: " + day4LowTemp + " °F");
 
@@ -348,9 +337,11 @@ $(document).ready(function() {
 // Event Handler to show or hide the change location fields
   $('#locationFields').on('hide.bs.collapse', function(event){
       $('#showOrHide').text("Change Location");
+      console.log("I closed the box!");
     });
     $('#locationFields').on('show.bs.collapse', function(event){
       $('#showOrHide').text("Hide");
+      console.log("I opened the box!");
     });
 
 // Event Handler to get user inputted zip code and trigger function to get inputted weather
@@ -360,9 +351,9 @@ $('#submit').on('click', function(event) {
 });
 
 // Event Handler to use enter key to submit
-$("#postal-code").keyup(function(event){
+$('#postal-code').keyup(function(event){
     if(event.keyCode == 13){
-        $("#submit").click();
+        $('#submit').click();
     }
 });
 
@@ -374,7 +365,6 @@ function getInputWeather(zipInput) {
   var fiveDayWeatherURL = 'http://api.openweathermap.org/data/2.5/forecast/daily?zip=' + zipInput + ',us' + '&cnt=5' + '&units=imperial' + '&appid=' + appID;
   console.log("5 day zip url " + fiveDayWeatherURL);
   console.log(weatherURL);
-  getZipLocation(zipInput, weatherURL);
   getZipLocation(zipInput, weatherURL, fiveDayWeatherURL);
 
 }
