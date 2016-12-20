@@ -16,46 +16,124 @@
   </head>
   <body>
     <div class="container text-center col-sm-8 col-sm-offset-2">
-      <div id="currentWeatherPane">
+      <div id="currentWeatherPane" class="row">
         <h1 class="page-header" id="city">Getting your Location...</h1>
-      <div class="row col-sm-8 col-sm-offset-2">
-        <div id="icons">
+        <div>
+          <h3 id="currentDateText"></h3>
+        </div>
+        <div>
           <canvas id="currentWeatherIcon" width="64" height="64">
           </canvas>
         </div>
         <h3 id="currentWeatherText">Getting Current Weather...</h3>
           <div>
-            <span id="currentHighTempText"></span>
-          </div>
-          <div>
             <span id="currentTempText"></span>
           </div>
-          <div>
-            <span id="currentLowTempText"></span>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1" id="p1">
+            <div>
+              <h4 id="day0DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day0WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day0WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day0HighTempText"></span>
+            </div>
+            <div>
+              <span id="day0LowTempText"></span>
+            </div>
+          </div>
+          <div class= "col-md-2" id="p2">
+            <div>
+              <h4 id="day1DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day1WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day1WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day1HighTempText"></span>
+            </div>
+            <div>
+              <span id="day1LowTempText"></span>
+            </div>
+          </div>
+          <div class= "col-md-2" id="p3">
+            <div>
+              <h4 id="day2DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day2WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day2WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day2HighTempText"></span>
+            </div>
+            <div>
+              <span id="day2LowTempText"></span>
+            </div>
+          </div>
+          <div class= "col-md-2" id="p4">
+            <div>
+              <h4 id="day3DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day3WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day3WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day3HighTempText"></span>
+            </div>
+            <div>
+              <span id="day3LowTempText"></span>
+            </div>
+          </div>
+          <div class="col-md-2" id="p5">
+            <div>
+              <h4 id="day4DateText"></h4>
+            </div>
+            <div>
+              <canvas id="day4WeatherIcon" width="64" height="64">
+              </canvas>
+            </div>
+            <div>
+              <h4 id="day4WeatherText"></h4>
+            </div>
+            <div>
+              <span id="day4HighTempText"></span>
+            </div>
+            <div>
+              <span id="day4LowTempText"></span>
+            </div>
           </div>
         </div>
-      <div id="settingsPane" class="col-sm-8 col-sm-offset-2">
-        <div>
-          <input id="units" type="checkbox" checked data-toggle="toggle" data-on="°F" data-offstyle="info" data-off="°C" data-size="small" >
-        </div>
+      <div id="settingsPane" class="row">
+          <input id="units" type="checkbox" checked data-toggle="toggle" data-on="°F" data-offstyle="info" data-off="°C" data-size="small" ></input>
       </div>
-      <div id="zipCodeRow" class="col-sm-8 col-sm-offset-2">
-        <div>
+      <div id="zipCodeRow" class="row">
           <a id="showOrHide" href="#locationFields" data-toggle="collapse">Change Location</a>
-        </div>
         <div id="locationFields" class="collapse">
-          <div>
-            <input class="text-center" id="postal-code" name="postal-code" type="number" placeholder="zip or postal code">
-          </div>
-          <div>
-            <p id="invalid"></p>
-          </div>
-          <div>
-            <button id="submit" class="btn btn-primary btn-sm text-center">Submit</button>
-          </div>
+          <input class="text-center" id="postal-code" name="postal-code" type="number" placeholder="zip or postal code"></input>
+          <p id="invalid"></p>
+          <button id="submit" class="btn btn-primary btn-sm text-center">Submit</button>
         </div>
       </div>
-      <div id="footer"class="col-sm-8 col-sm-offset-2">
+      <div id="footer" class="row">
         <hr id="smallHR">
         <p class="love">Made with <i class="fa fa-heart"></i> by <a href="https://www.freecodecamp.com/drewcharris" target="_blank"> Drew Harris</p>
       </div>
