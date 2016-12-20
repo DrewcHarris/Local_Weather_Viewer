@@ -3,13 +3,19 @@
   font-size: 18px;
 }
 
+#currentWeatherPane {
+  margin-bottom: 25px;
+}
+
 #smallHR{
   width: 250px;
 }
 #settingsPane {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: 1px solid red;
+  margin-bottom: 25px;
+}
+
+#p1, #p2, #p3, #p4, #p5{
+    margin-bottom: 50px;
 }
 
 #submit{
@@ -19,10 +25,6 @@
 #postal-code {
     margin: 10px;
 
-}
-
-#p1, #p2, #p3, #p4, #p5{
-    margin-bottom: 50px;
 }
 
 input[type=number] {
