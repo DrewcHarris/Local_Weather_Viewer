@@ -14,7 +14,7 @@ $(document).ready(function() {
         var lon = ipapi_response.longitude;
         var lat = ipapi_response.latitude;
         console.log("ipapi response: " + "https://ipapi.co/json/");
-        $('#city').text(city + ", " + state + "'s Current Weather");
+        $('#city').text("Current Weather in " + city + ", " + state);
         getWeatherURL(city, lon, lat);
       },
       error: function(request,status,errorThrown) {
@@ -258,7 +258,7 @@ function getInputWeather(zipInput) {
       success: function(zippopotam_response){
         var city = zippopotam_response.places[0]["place name"];
         var state = zippopotam_response.places[0].state;
-        $('#city').text(city + ", " + state + "'s Current Weather");
+        $('#city').text("Current Weather in " + city + ", " + state);
         $('#invalid').text("");
         $('#units').bootstrapToggle('on');
         $('#postal-code').val("");
